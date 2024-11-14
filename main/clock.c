@@ -31,11 +31,8 @@ void sntp_sync_time(struct timeval *tv)
 }
 #endif
 
-void gettimedate(void)
-{
+char* gettimedate(void){
     ++boot_count;
-    ESP_LOGI(TAG, "Boot count: %d", boot_count);
-
     time_t now;
     struct tm timeinfo;
     time(&now);
@@ -67,14 +64,17 @@ void gettimedate(void)
         time(&now);
     }
 #endif
-
-    char strftime_buf[64];
-
-    setenv("TZ", "<-03>3", 1);
+    setenv("TZ", "<-03>3", 1);  // Set timezone to UTC-3.
     tzset();
     localtime_r(&now, &timeinfo);
-    strftime(strftime_buf, sizeof(strftime_buf), "%c", &timeinfo);
-    ESP_LOGI(TAG, "The current date/time in Shanghai is: %s", strftime_buf);
+
+ char* strftime_buf = malloc(64);  // Dynamically allocate memory.
+    if (strftime_buf == NULL) {
+        ESP_LOGE(TAG, "Failed to allocate memory for time string.");
+        return NULL;
+    }
+
+    strftime(strftime_buf, 64, "%c", &timeinfo);
 
     if (sntp_get_sync_mode() == SNTP_SYNC_MODE_SMOOTH) {
         struct timeval outdelta;
@@ -87,12 +87,12 @@ void gettimedate(void)
             vTaskDelay(2000 / portTICK_PERIOD_MS);
         }
     }
-
+  return strftime_buf;
 }
 
 static void obtain_time(void)
 {
-   #if LWIP_DHCP_GET_NTP_SRV
+  #if LWIP_DHCP_GET_NTP_SRV
     /**
      * NTP server address could be acquired via DHCP,
      * see following menuconfig options:
@@ -104,7 +104,7 @@ static void obtain_time(void)
      */
     ESP_LOGI(TAG, "Initializing SNTP");
     esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG(CONFIG_SNTP_TIME_SERVER);
-    config.start = false;                       // start SNTP service explic[<8;88;30mitly (after connecting)
+    config.start = false;                       // start SNTP service explicitly (after connecting)
     config.server_from_dhcp = true;             // accept NTP offers from DHCP server, if any (need to enable *before* connecting)
     config.renew_servers_after_new_IP = true;   // let esp-netif update configured SNTP server(s) after receiving DHCP lease
     config.index_of_first_server = 1;           // updates from server num 1, leaving server 0 (from DHCP) intact
@@ -143,12 +143,12 @@ static void obtain_time(void)
     /* This demonstrates configuring more than one server
      */
     esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG_MULTIPLE(2,
-                               ESP_SNTP_SERVER_LIST(CONFIG_SNTP_TIME_SERVER, "pool.ntp.org" ) );
+                               ESP_SNTP_SERVER_LIST(CONFIG_SNTP_TIME_SERVER, "ntps1.pads.ufrj.br" ) );
 #else
     /*
      * This is the basic default config with one server and starting the service
      */
-    esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG("pool.ntp.org");
+    esp_sntp_config_t config = ESP_NETIF_SNTP_DEFAULT_CONFIG(CONFIG_SNTP_TIME_SERVER);
 #endif
     config.sync_cb = time_sync_notification_cb;     // Note: This is only needed if we want
 #ifdef CONFIG_SNTP_TIME_SYNC_METHOD_SMOOTH
@@ -157,17 +157,4 @@ static void obtain_time(void)
 
     esp_netif_sntp_init(&config);
 #endif
-
-    // wait for time to be set
-    time_t now = 0;
-    struct tm timeinfo = { 0 };
-    int retry = 0;
-    const int retry_count = 15;
-    while (esp_netif_sntp_sync_wait(2000 / portTICK_PERIOD_MS) == ESP_ERR_TIMEOUT && ++retry < retry_count) {
-        ESP_LOGI(TAG, "Waiting for system time to be set... (%d/%d)", retry, retry_count);
-    }
-    time(&now);
-    localtime_r(&now, &timeinfo);
-
-    esp_netif_sntp_deinit();
 }
