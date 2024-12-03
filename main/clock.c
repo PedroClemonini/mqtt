@@ -31,7 +31,7 @@ void sntp_sync_time(struct timeval *tv)
 }
 #endif
 
-char* gettimedate(void){
+void timesync(void){
     ++boot_count;
     time_t now;
     struct tm timeinfo;
@@ -64,14 +64,13 @@ char* gettimedate(void){
         time(&now);
     }
 #endif
-    setenv("TZ", "<-03>3", 1);  // Set timezone to UTC-3.
+    setenv("TZ", "UTC0", 1);
     tzset();
     localtime_r(&now, &timeinfo);
 
  char* strftime_buf = malloc(64);  // Dynamically allocate memory.
     if (strftime_buf == NULL) {
         ESP_LOGE(TAG, "Failed to allocate memory for time string.");
-        return NULL;
     }
 
     strftime(strftime_buf, 64, "%c", &timeinfo);
@@ -87,7 +86,6 @@ char* gettimedate(void){
             vTaskDelay(2000 / portTICK_PERIOD_MS);
         }
     }
-  return strftime_buf;
 }
 
 static void obtain_time(void)

@@ -1,0 +1,228 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 12 2024 18:48:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2626ch (156268) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=00036294 vaddr=3ffb0000 size=03d7ch ( 15740) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=0003a018 vaddr=40080000 size=06000h ( 24576) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a6534h (681268) map[0m
+[0;32mI (408) esp_image: segment 4: paddr=000e655c vaddr=40086000 size=10ccch ( 68812) load[0m
+[0;32mI (435) esp_image: segment 5: paddr=000f7230 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (447) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (447) boot: Disabling RNG early entropy source...[0m
+[0;32mI (458) cpu_start: Multicore app[0m
+[0;32mI (468) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) cpu_start: Application information:[0m
+[0;32mI (471) cpu_start: Project name:     main[0m
+[0;32mI (475) cpu_start: App version:      32e8b60-dirty[0m
+[0;32mI (481) cpu_start: Compile time:     Nov 12 2024 18:55:41[0m
+[0;32mI (487) cpu_start: ELF file SHA256:  036f6454a...[0m
+[0;32mI (492) cpu_start: ESP-IDF:          v5.2.3-dirty[0m
+[0;32mI (498) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (502) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (507) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (512) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (519) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFB8530 len 00027AD0 (158 KiB): DRAM[0m
+[0;32mI (531) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (544) heap_init: At 40096CCC len 00009334 (36 KiB): IRAM[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (559) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (573) main_task: Started on CPU0[0m
+[0;32mI (583) main_task: Calling app_main()[0m
+[0;32mI (603) wifi:wifi driver task: 3ffc0510, prio:23, stack:6656, core=0[0m
+[0;32mI (603) wifi:wifi firmware version: 82f54d2[0m
+[0;32mI (603) wifi:wifi certification version: v7.0[0m
+[0;32mI (603) wifi:config NVS flash: enabled[0m
+[0;32mI (603) wifi:config nano formating: disabled[0m
+[0;32mI (613) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (613) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (623) wifi:Init management short buffer num: 32[0m
+[0;32mI (623) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (623) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (633) wifi:Init static rx buffer num: 10[0m
+[0;32mI (633) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (643) wifi_init: rx ba win: 6[0m
+[0;32mI (643) wifi_init: tcpip mbox: 32[0m
+[0;32mI (643) wifi_init: udp mbox: 6[0m
+[0;32mI (653) wifi_init: tcp mbox: 6[0m
+[0;32mI (653) wifi_init: tcp tx win: 5760[0m
+[0;32mI (653) wifi_init: tcp rx win: 5760[0m
+[0;32mI (663) wifi_init: tcp mss: 1440[0m
+[0;32mI (663) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (673) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (673) example: Setting WiFi configuration SSID eduroam...[0m
+[0;32mI (683) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;32mI (773) wifi:mode : sta (34:5f:45:a8:9c:68)[0m
+[0;32mI (773) wifi:enable tsf[0m
+[0;32mI (773) main_task: Returned from app_main()[0m
+[0;32mI (1033) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (1033) wifi:state: init -> auth (b0)[0m
+[0;32mI (1043) wifi:state: auth -> assoc (0)[0m
+[0;32mI (1053) wifi:state: assoc -> run (10)[0m
+����������������������������������������������������������������t (1c0)
+[0;32mI (21103) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (21143) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (21143) wifi:state: init -> auth (b0)[0m
+[0;32mI (22143) wifi:state: auth -> init (200)[0m
+[0;32mI (22143) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (22203) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (22203) wifi:state: init -> auth (b0)[0m
+[0;32mI (23203) wifi:state: auth -> init (200)[0m
+[0;32mI (23203) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (23243) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (23243) wifi:state: init -> auth (b0)[0m
+[0;32mI (24243) wifi:state: auth -> init (200)[0m
+[0;32mI (24243) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (24323) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (24333) wifi:state: init -> auth (b0)[0m
+[0;32mI (25333) wifi:state: auth -> init (200)[0m
+[0;32mI (25333) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1[0m
+[0;32mI (25993) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (25993) wifi:state: init -> auth (b0)[0m
+[0;32mI (26993) wifi:state: auth -> init (200)[0m
+[0;32mI (26993) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (27033) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (27033) wifi:state: init -> auth (b0)[0m
+[0;32mI (28033) wifi:state: auth -> init (200)[0m
+[0;32mI (28033) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (29253) wifi:new:<11,0>, old:<6,0>, ap:<255,255>, sta:<11,0>, prof:1[0m
+[0;32mI (29253) wifi:state: init -> auth (b0)[0m
+[0;32mI (29253) wifi:state: auth -> assoc (0)[0m
+[0;32mI (29263) wifi:state: assoc -> run (10)[0m
+[0;32mI (29923) wifi:connected with eduroam, aid = 6, channel 11, BW20, bssid = 70:ca:97:68:08:58[0m
+[0;32mI (29923) wifi:security: WPA2-ENT, phy: bgn, rssi: -62[0m
+[0;32mI (29923) wifi:pm start, type: 1[0m
+
+[0;32mI (29933) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (29943) wifi:<ba-add>idx:0 (ifx:0, 70:ca:97:68:08:58), tid:0, ssn:0, winSize:64[0m
+[0;32mI (29973) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (31013) wifi:<ba-add>idx:1 (ifx:0, 70:ca:97:68:08:58), tid:6, ssn:14, winSize:64[0m
+[0;32mI (31943) esp_netif_handlers: sta ip: 10.119.127.177, mask: 255.255.248.0, gw: 10.119.120.1[0m
+[0;32mI (31943) Main Task: Obtem horario[0m
+[0;32mI (31943) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (31953) example: Initializing and starting SNTP[0m
+[0;32mI (33953) example: Waiting for system time to be set... (1/15)[0m
+[0;32mI (35953) example: Waiting for system time to be set... (2/15)[0m
+[0;32mI (37953) example: Waiting for system time to be set... (3/15)[0m
+[0;32mI (39953) example: Waiting for system time to be set... (4/15)[0m
+[0;32mI (41953) example: Waiting for system time to be set... (5/15)[0m
+[0;32mI (43953) example: Waiting for system time to be set... (6/15)[0m
+[0;32mI (45953) example: Waiting for system time to be set... (7/15)[0m
+����������������������������������������������������������������g for system time to be set... (8/15)[0m
+[0;32mI (49953) example: Waiting for system time to be set... (9/15)[0m
+[0;32mI (51953) example: Waiting for system time to be set... (10/15)[0m
+[0;32mI (53953) example: Waiting for system time to be set... (11/15)[0m
+[0;32mI (55953) example: Waiting for system time to be set... (12/15)[0m
+[0;32mI (57953) example: Waiting for system time to be set... (13/15)[0m
+[0;32mI (59953) example: Waiting for system time to be set... (14/15)[0m
+[0;32mI (61953) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (61953) MQTT: Other event id:7[0m
+����������������������������������������������������������������54] select() timeout[0m
+[0;31mE (71973) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (71973) mqtt_client: Error transport connect[0m
+[0;32mI (71973) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=0
+[0m
+[0;32mI (71983) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (71983) MQTT: Last error reported from esp-tls: 0x32774[0m
+[0;32mI (71993) MQTT: Last errno string (Success)[0m
+[0;32mI (71993) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=2
+[0m
+[0;32mI (72003) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (82013) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (82013) MQTT: Other event id:7[0m
+����������������������������������������������������������������54] select() timeout[0m
+[0;31mE (92023) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (92023) mqtt_client: Error transport connect[0m
+[0;32mI (92023) MQTT: Event dispatched from event loop base=M����������������������������������������������������������������0;32mI (92033) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (92033) MQTT: Last error reported from esp-tls: 0x32774[0m
+[0;32mI (92043) MQTT: Last errno string (Success)[0m
+[0;32mI (92043) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=2
+[0m
+[0;32mI (92053) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (102063) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (102063) MQTT: Other event id:7[0m
+����������������������������������������������������������������=54] select() timeout[0m
+[0;31mE (112073) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (112073) mqtt_client: Error transport connect[0m
+[0;32mI (112073) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=0
+[0m
+[0;32mI (112083) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (112083) MQTT: Last error reported from esp-tls: 0x32774[0m
+[0;32mI (112093) MQTT: Last errno string (Success)[0m
+[0;32mI (112103) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=2
+[0m
+[0;32mI (112103) MQTT: MQTT_EVENT_DISCONNECTED[0m
+����������������������������������������������������������������spatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (122113) MQTT: Other event id:7[0m
+[0;31mE (132123) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (132123) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (132123) mqtt_client: Error transport connect[0m
+[0;32mI (132123) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=0
+[0m
+[0;32mI (132133) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (132133) MQTT: Last error reported from esp-tls: 0x32774[0m
+[0;32mI (132143) MQTT: Last errno string (Success)[0m
+[0;32mI (132153) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=2
+[0m
+[0;32mI (132153) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (142163) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (142163) MQTT: Other event id:7[0m
+����������������������������������������������������������������=54] select() timeout[0m
+[0;31mE (152173) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (152173) mqtt_client: Error transport connect[0m
+[0;32mI (152173) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=0
+[0m
+[0;32mI (152183) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (152183) MQTT: Last error reported from esp-tls: 0x32774[0m
+[0;32mI (152193) MQTT: Last errno string (Success)[0m
+[0;32mI (152203) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=2
+[0m
+[0;32mI (152203) MQTT: MQTT_EVENT_DISCONNECTED[0m
+����������������������������������������������������������������spatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (162213) MQTT: Other event id:7[0m
+[0;31mE (172223) esp-tls: [sock=54] select() timeout[0m
+[0;31mE (172223) transport_base: Failed to open a new connection: 32774[0m
+[0;31mE (172223) mqtt_client: Error transport connect[0m
+[0;32mI (172223) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=0
+[0m
+[0;32mI (172233) MQTT: MQTT_EVENT_ERROR[0m
+[0;31mE (172233) MQTT: Last error reported from esp-tls: 0x32774[0m
+[0;32mI (172243) MQTT: Last errno string (Success)[0m
+[0;32mI (172253) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=2
+[0m
+[0;32mI (172253) MQTT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (182263) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (182263) MQTT: Other event id:7[0m

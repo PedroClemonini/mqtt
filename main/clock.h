@@ -1,7 +1,7 @@
 #ifndef CLOCK_H
 #define CLOCK_H
 
-char* gettimedate(void);
+void timesync(void);
 
 #endif // !TIME_H
 

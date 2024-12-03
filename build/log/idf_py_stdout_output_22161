@@ -1,0 +1,630 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 12 2024 18:48:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25270h (152176) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00035298 vaddr=3ffb0000 size=03d5ch ( 15708) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00038ffc vaddr=40080000 size=0701ch ( 28700) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f788h (653192) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df7b0 vaddr=4008701c size=0fcb0h ( 64688) load[0m
+[0;32mI (424) esp_image: segment 5: paddr=000ef468 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (447) cpu_start: Multicore app[0m
+[0;32mI (457) cpu_start: Pro cpu start user code[0m
+[0;32mI (457) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (457) cpu_start: Application information:[0m
+[0;32mI (460) cpu_start: Project name:     main[0m
+[0;32mI (464) cpu_start: App version:      02bb22a-dirty[0m
+[0;32mI (470) cpu_start: Compile time:     Nov 17 2024 16:24:57[0m
+[0;32mI (476) cpu_start: ELF file SHA256:  a7c4a02e5...[0m
+[0;32mI (481) cpu_start: ESP-IDF:          v5.2.3-dirty[0m
+[0;32mI (487) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB8490 len 00027B70 (158 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (527) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40096CCC len 00009334 (36 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (562) main_task: Started on CPU0[0m
+[0;32mI (572) main_task: Calling app_main()[0m
+[0;32mI (602) wifi:wifi driver task: 3ffc04f4, prio:23, stack:6656, core=0[0m
+[0;32mI (612) wifi:wifi firmware version: 82f54d2[0m
+[0;32mI (612) wifi:wifi certification version: v7.0[0m
+[0;32mI (612) wifi:config NVS flash: enabled[0m
+[0;32mI (612) wifi:config nano formating: disabled[0m
+[0;32mI (612) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (622) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (622) wifi:Init management short buffer num: 32[0m
+[0;32mI (632) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (632) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (642) wifi:Init static rx buffer num: 10[0m
+[0;32mI (642) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (642) wifi_init: rx ba win: 6[0m
+[0;32mI (652) wifi_init: tcpip mbox: 32[0m
+[0;32mI (652) wifi_init: udp mbox: 6[0m
+[0;32mI (652) wifi_init: tcp mbox: 6[0m
+[0;32mI (662) wifi_init: tcp tx win: 5760[0m
+[0;32mI (662) wifi_init: tcp rx win: 5760[0m
+[0;32mI (672) wifi_init: tcp mss: 1440[0m
+[0;32mI (672) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (682) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (682) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (692) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (782) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (842) wifi:mode : sta (34:5f:45:a8:9c:68)[0m
+[0;32mI (842) wifi:enable tsf[0m
+[0;32mI (862) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (862) wifi:state: init -> auth (b0)[0m
+[0;32mI (872) wifi:state: auth -> assoc (0)[0m
+[0;32mI (872) wifi:state: assoc -> run (10)[0m
+[0;32mI (962) wifi:<ba-add>idx:0 (ifx:0, 10:c2:5a:15:20:10), tid:0, ssn:0, winSize:64[0m
+[0;32mI (982) wifi:connected with Maryjane, aid = 9, channel 6, BW20, bssid = 10:c2:5a:15:20:10[0m
+[0;32mI (982) wifi:security: WPA2-PSK, phy: bgn, rssi: -67[0m
+[0;32mI (982) wifi:pm start, type: 1[0m
+
+[0;32mI (982) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1072) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2492) esp_netif_handlers: sta ip: 192.168.0.28, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2492) Wifi: got ip:192.168.0.28[0m
+[0;32mI (2492) Wifi: Conectado ao wifi[0m
+[0;32mI (2492) Wifi: connected to ap SSID:Maryjane password:maryjane1234567890[0m
+[0;32mI (2502) Main Task: Obtem horario[0m
+[0;32mI (2512) main_task: Returned from app_main()[0m
+[0;32mI (2502) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (2522) example: Initializing and starting SNTP[0m
+[0;32mI (2532) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (2532) MQTT: Other event id:7[0m
+[0;32mI (2642) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=1
+[0m
+[0;32mI (2642) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (2642) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (2652) example: Initializing and starting SNTP[0m
+[0;31mE (2662) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (2672) MQTT: Mensagem Enviada, ID: 57907[0m
+[0;32mI (2682) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (2682) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57907[0m
+[0;32mI (3272) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (3272) example: Initializing and starting SNTP[0m
+[0;31mE (3272) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (3282) MQTT: Mensagem Enviada, ID: 45864[0m
+
+assert failed: tlsf_free tlsf.c:1120 (!block_is_free(block) && "block already marked as free")
+
+
+Backtrace: 0x400817fa:0x3ffc91e0 0x40089465:0x3ffc9200 0x40090aed:0x3ffc9220 0x4008e562:0x3ffc9340 0x4008e3e8:0x3ffc9360 0x40082196:0x3ffc9380 0x40090b1d:0x3ffc93a0 0x400d7979:0x3ffc93c0 0x40089fb1:0x3ffc9430
+
+
+
+
+ELF file SHA256: a7c4a02e5
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 12 2024 18:48:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25270h (152176) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00035298 vaddr=3ffb0000 size=03d5ch ( 15708) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00038ffc vaddr=40080000 size=0701ch ( 28700) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f788h (653192) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df7b0 vaddr=4008701c size=0fcb0h ( 64688) load[0m
+[0;32mI (424) esp_image: segment 5: paddr=000ef468 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (447) cpu_start: Multicore app[0m
+[0;32mI (456) cpu_start: Pro cpu start user code[0m
+[0;32mI (457) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (457) cpu_start: Application information:[0m
+[0;32mI (460) cpu_start: Project name:     main[0m
+[0;32mI (464) cpu_start: App version:      02bb22a-dirty[0m
+[0;32mI (470) cpu_start: Compile time:     Nov 17 2024 16:24:57[0m
+[0;32mI (476) cpu_start: ELF file SHA256:  a7c4a02e5...[0m
+[0;32mI (481) cpu_start: ESP-IDF:          v5.2.3-dirty[0m
+[0;32mI (487) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB8490 len 00027B70 (158 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (527) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40096CCC len 00009334 (36 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (562) main_task: Started on CPU0[0m
+[0;32mI (572) main_task: Calling app_main()[0m
+[0;32mI (602) wifi:wifi driver task: 3ffc0578, prio:23, stack:6656, core=0[0m
+[0;32mI (612) wifi:wifi firmware version: 82f54d2[0m
+[0;32mI (612) wifi:wifi certification version: v7.0[0m
+[0;32mI (612) wifi:config NVS flash: enabled[0m
+[0;32mI (612) wifi:config nano formating: disabled[0m
+[0;32mI (612) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (622) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (622) wifi:Init management short buffer num: 32[0m
+[0;32mI (632) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (632) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (642) wifi:Init static rx buffer num: 10[0m
+[0;32mI (642) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (642) wifi_init: rx ba win: 6[0m
+[0;32mI (652) wifi_init: tcpip mbox: 32[0m
+[0;32mI (652) wifi_init: udp mbox: 6[0m
+[0;32mI (652) wifi_init: tcp mbox: 6[0m
+[0;32mI (662) wifi_init: tcp tx win: 5760[0m
+[0;32mI (662) wifi_init: tcp rx win: 5760[0m
+[0;32mI (672) wifi_init: tcp mss: 1440[0m
+[0;32mI (672) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (682) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (682) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (692) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;33mW (782) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (802) wifi:mode : sta (34:5f:45:a8:9c:68)[0m
+[0;32mI (802) wifi:enable tsf[0m
+[0;32mI (822) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (822) wifi:state: init -> auth (b0)[0m
+[0;32mI (832) wifi:state: auth -> assoc (0)[0m
+[0;32mI (842) wifi:state: assoc -> run (10)[0m
+[0;32mI (892) wifi:<ba-add>idx:0 (ifx:0, 10:c2:5a:15:20:10), tid:0, ssn:0, winSize:64[0m
+[0;32mI (942) wifi:connected with Maryjane, aid = 9, channel 6, BW20, bssid = 10:c2:5a:15:20:10[0m
+[0;32mI (942) wifi:security: WPA2-PSK, phy: bgn, rssi: -66[0m
+[0;32mI (952) wifi:pm start, type: 1[0m
+
+[0;32mI (952) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1012) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2462) esp_netif_handlers: sta ip: 192.168.0.28, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2462) Wifi: got ip:192.168.0.28[0m
+[0;32mI (2462) Wifi: Conectado ao wifi[0m
+[0;32mI (2462) Wifi: connected to ap SSID:Maryjane password:maryjane1234567890[0m
+[0;32mI (2472) Main Task: Obtem horario[0m
+[0;32mI (2472) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (2482) example: Initializing and starting SNTP[0m
+[0;32mI (2492) main_task: Returned from app_main()[0m
+[0;32mI (2502) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (2502) MQTT: Other event id:7[0m
+[0;32mI (2612) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=1
+[0m
+[0;32mI (2612) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (2622) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (2622) example: Initializing and starting SNTP[0m
+[0;31mE (2632) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (2642) MQTT: Mensagem Enviada, ID: 57409[0m
+[0;32mI (2662) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (2662) MQTT: MQTT_EVENT_PUBLISHED, msg_id=57409[0m
+[0;32mI (3242) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (3242) example: Initializing and starting SNTP[0m
+[0;31mE (3242) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (3252) MQTT: Mensagem Enviada, ID: 1165[0m
+
+assert failed: tlsf_free tlsf.c:1120 (!block_is_free(block) && "block already marked as free")
+
+
+Backtrace: 0x400817fa:0x3ffc90a0 0x40089465:0x3ffc90c0 0x40090aed:0x3ffc90e0 0x4008e562:0x3ffc9200 0x4008e3e8:0x3ffc9220 0x40082196:0x3ffc9240 0x40090b1d:0x3ffc9260 0x400d7979:0x3ffc9280 0x40089fb1:0x3ffc92f0
+
+
+
+
+ELF file SHA256: a7c4a02e5
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 12 2024 18:48:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25270h (152176) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00035298 vaddr=3ffb0000 size=03d5ch ( 15708) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00038ffc vaddr=40080000 size=0701ch ( 28700) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f788h (653192) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df7b0 vaddr=4008701c size=0fcb0h ( 64688) load[0m
+[0;32mI (424) esp_image: segment 5: paddr=000ef468 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (447) cpu_start: Multicore app[0m
+[0;32mI (456) cpu_start: Pro cpu start user code[0m
+[0;32mI (457) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (457) cpu_start: Application information:[0m
+[0;32mI (460) cpu_start: Project name:     main[0m
+[0;32mI (464) cpu_start: App version:      02bb22a-dirty[0m
+[0;32mI (470) cpu_start: Compile time:     Nov 17 2024 16:24:57[0m
+[0;32mI (476) cpu_start: ELF file SHA256:  a7c4a02e5...[0m
+[0;32mI (481) cpu_start: ESP-IDF:          v5.2.3-dirty[0m
+[0;32mI (487) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB8490 len 00027B70 (158 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (527) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40096CCC len 00009334 (36 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (562) main_task: Started on CPU0[0m
+[0;32mI (572) main_task: Calling app_main()[0m
+[0;32mI (602) wifi:wifi driver task: 3ffc04f4, prio:23, stack:6656, core=0[0m
+[0;32mI (612) wifi:wifi firmware version: 82f54d2[0m
+[0;32mI (612) wifi:wifi certification version: v7.0[0m
+[0;32mI (612) wifi:config NVS flash: enabled[0m
+[0;32mI (612) wifi:config nano formating: disabled[0m
+[0;32mI (612) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (622) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (622) wifi:Init management short buffer num: 32[0m
+[0;32mI (632) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (632) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (642) wifi:Init static rx buffer num: 10[0m
+[0;32mI (642) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (642) wifi_init: rx ba win: 6[0m
+[0;32mI (652) wifi_init: tcpip mbox: 32[0m
+[0;32mI (652) wifi_init: udp mbox: 6[0m
+[0;32mI (652) wifi_init: tcp mbox: 6[0m
+[0;32mI (662) wifi_init: tcp tx win: 5760[0m
+[0;32mI (662) wifi_init: tcp rx win: 5760[0m
+[0;32mI (672) wifi_init: tcp mss: 1440[0m
+[0;32mI (672) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (682) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (682) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (692) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;32mI (782) wifi:mode : sta (34:5f:45:a8:9c:68)[0m
+[0;32mI (782) wifi:enable tsf[0m
+[0;32mI (802) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (802) wifi:state: init -> auth (b0)[0m
+[0;32mI (812) wifi:state: auth -> assoc (0)[0m
+[0;32mI (812) wifi:state: assoc -> run (10)[0m
+[0;32mI (902) wifi:<ba-add>idx:0 (ifx:0, 10:c2:5a:15:20:10), tid:0, ssn:0, winSize:64[0m
+[0;32mI (932) wifi:connected with Maryjane, aid = 9, channel 6, BW20, bssid = 10:c2:5a:15:20:10[0m
+[0;32mI (932) wifi:security: WPA2-PSK, phy: bgn, rssi: -64[0m
+[0;32mI (932) wifi:pm start, type: 1[0m
+
+[0;32mI (932) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (992) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2442) esp_netif_handlers: sta ip: 192.168.0.28, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2442) Wifi: got ip:192.168.0.28[0m
+[0;32mI (2442) Wifi: Conectado ao wifi[0m
+[0;32mI (2442) Wifi: connected to ap SSID:Maryjane password:maryjane1234567890[0m
+[0;32mI (2452) Main Task: Obtem horario[0m
+[0;32mI (2452) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (2462) example: Initializing and starting SNTP[0m
+[0;32mI (2472) main_task: Returned from app_main()[0m
+[0;32mI (2482) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (2482) MQTT: Other event id:7[0m
+[0;32mI (2582) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=1
+[0m
+[0;32mI (2582) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (2582) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (2592) example: Initializing and starting SNTP[0m
+[0;31mE (2602) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (2612) MQTT: Mensagem Enviada, ID: 24462[0m
+[0;32mI (2642) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (2642) MQTT: MQTT_EVENT_PUBLISHED, msg_id=24462[0m
+[0;32mI (3212) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (3212) example: Initializing and starting SNTP[0m
+[0;31mE (3212) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (3222) MQTT: Mensagem Enviada, ID: 332[0m
+
+assert failed: tlsf_free tlsf.c:1120 (!block_is_free(block) && "block already marked as free")
+
+
+Backtrace: 0x400817fa:0x3ffc9120 0x40089465:0x3ffc9140 0x40090aed:0x3ffc9160 0x4008e562:0x3ffc9280 0x4008e3e8:0x3ffc92a0 0x40082196:0x3ffc92c0 0x40090b1d:0x3ffc92e0 0x400d7979:0x3ffc9300 0x40089fb1:0x3ffc9370
+
+
+
+
+ELF file SHA256: a7c4a02e5
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 12 2024 18:48:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25270h (152176) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00035298 vaddr=3ffb0000 size=03d5ch ( 15708) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00038ffc vaddr=40080000 size=0701ch ( 28700) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f788h (653192) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df7b0 vaddr=4008701c size=0fcb0h ( 64688) load[0m
+[0;32mI (424) esp_image: segment 5: paddr=000ef468 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (447) cpu_start: Multicore app[0m
+[0;32mI (456) cpu_start: Pro cpu start user code[0m
+[0;32mI (457) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (457) cpu_start: Application information:[0m
+[0;32mI (460) cpu_start: Project name:     main[0m
+[0;32mI (464) cpu_start: App version:      02bb22a-dirty[0m
+[0;32mI (470) cpu_start: Compile time:     Nov 17 2024 16:24:57[0m
+[0;32mI (476) cpu_start: ELF file SHA256:  a7c4a02e5...[0m
+[0;32mI (481) cpu_start: ESP-IDF:          v5.2.3-dirty[0m
+[0;32mI (487) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB8490 len 00027B70 (158 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (527) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40096CCC len 00009334 (36 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (562) main_task: Started on CPU0[0m
+[0;32mI (572) main_task: Calling app_main()[0m
+[0;32mI (602) wifi:wifi driver task: 3ffc04f4, prio:23, stack:6656, core=0[0m
+[0;32mI (612) wifi:wifi firmware version: 82f54d2[0m
+[0;32mI (612) wifi:wifi certification version: v7.0[0m
+[0;32mI (612) wifi:config NVS flash: enabled[0m
+[0;32mI (612) wifi:config nano formating: disabled[0m
+[0;32mI (612) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (622) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (622) wifi:Init management short buffer num: 32[0m
+[0;32mI (632) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (632) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (642) wifi:Init static rx buffer num: 10[0m
+[0;32mI (642) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (642) wifi_init: rx ba win: 6[0m
+[0;32mI (652) wifi_init: tcpip mbox: 32[0m
+[0;32mI (652) wifi_init: udp mbox: 6[0m
+[0;32mI (652) wifi_init: tcp mbox: 6[0m
+[0;32mI (662) wifi_init: tcp tx win: 5760[0m
+[0;32mI (662) wifi_init: tcp rx win: 5760[0m
+[0;32mI (672) wifi_init: tcp mss: 1440[0m
+[0;32mI (672) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (682) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (682) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (692) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;32mI (782) wifi:mode : sta (34:5f:45:a8:9c:68)[0m
+[0;32mI (782) wifi:enable tsf[0m
+[0;32mI (792) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (792) wifi:state: init -> auth (b0)[0m
+[0;32mI (812) wifi:state: auth -> assoc (0)[0m
+[0;32mI (822) wifi:state: assoc -> run (10)[0m
+[0;32mI (1912) wifi:<ba-add>idx:0 (ifx:0, 10:c2:5a:15:20:10), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1932) wifi:connected with Maryjane, aid = 9, channel 6, BW20, bssid = 10:c2:5a:15:20:10[0m
+[0;32mI (1932) wifi:security: WPA2-PSK, phy: bgn, rssi: -64[0m
+[0;32mI (1942) wifi:pm start, type: 1[0m
+
+[0;32mI (1942) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2022) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (3452) esp_netif_handlers: sta ip: 192.168.0.28, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (3452) Wifi: got ip:192.168.0.28[0m
+[0;32mI (3452) Wifi: Conectado ao wifi[0m
+[0;32mI (3452) Wifi: connected to ap SSID:Maryjane password:maryjane1234567890[0m
+[0;32mI (3462) Main Task: Obtem horario[0m
+[0;32mI (3462) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (3472) example: Initializing and starting SNTP[0m
+[0;32mI (3482) main_task: Returned from app_main()[0m
+[0;32mI (3492) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (3492) MQTT: Other event id:7[0m
+[0;32mI (3632) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=1
+[0m
+[0;32mI (3632) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (3632) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (3642) example: Initializing and starting SNTP[0m
+[0;31mE (3642) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (3662) MQTT: Mensagem Enviada, ID: 28234[0m
+[0;32mI (3682) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (3682) MQTT: MQTT_EVENT_PUBLISHED, msg_id=28234[0m
+[0;32mI (4262) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (4262) example: Initializing and starting SNTP[0m
+[0;31mE (4262) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (4272) MQTT: Mensagem Enviada, ID: 18096[0m
+[0;32mI (4482) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (4482) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18096[0m
+[0;32mI (4882) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (4882) example: Initializing and starting SNTP[0m
+[0;31mE (4882) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (4892) MQTT: Mensagem Enviada, ID: 36801[0m
+[0;32mI (5102) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (5102) MQTT: MQTT_EVENT_PUBLISHED, msg_id=36801[0m
+[0;32mI (5492) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (5492) example: Initializing and starting SNTP[0m
+[0;31mE (5492) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (5502) MQTT: Mensagem Enviada, ID: 24387[0m
+[0;32mI (5612) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (5622) MQTT: MQTT_EVENT_PUBLISHED, msg_id=24387[0m
+[0;32mI (6102) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (6102) example: Initializing and starting SNTP[0m
+[0;31mE (6102) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (6112) MQTT: Mensagem Enviada, ID: 5999[0m
+[0;32mI (6712) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (6712) example: Initializing and starting SNTP[0m
+[0;31mE (6712) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (6722) MQTT: Mensagem Enviada, ID: 29413[0m
+[0;32mI (6942) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (6942) MQTT: MQTT_EVENT_PUBLISHED, msg_id=5999[0m
+[0;32mI (6952) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (6952) MQTT: MQTT_EVENT_PUBLISHED, msg_id=29413[0m
+[0;32mI (7322) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (7322) example: Initializing and starting SNTP[0m
+[0;31mE (7322) esp_netif_sntp: esp_netif_sntp_init(94): esp_netif_sntp already initialized[0m
+[0;32mI (7332) MQTT: Mensagem Enviada, ID: 53296[0m
+[0;32mI (7352) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (7352) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53296[0m
+[0;32mI (7782) example: Notification of a time synchronization event[0m
+[0;32mI (7932) MQTT: Mensagem Enviada, ID: 37[0m
+[0;32mI (7972) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (7972) MQTT: MQTT_EVENT_PUBLISHED, msg_id=37[0m
+[0;32mI (8532) MQTT: Mensagem Enviada, ID: 63418[0m
+[0;32mI (8582) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (8582) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63418[0m
+[0;32mI (9132) MQTT: Mensagem Enviada, ID: 16977[0m
+[0;32mI (9732) MQTT: Mensagem Enviada, ID: 54074[0m
+[0;32mI (9812) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (9812) MQTT: MQTT_EVENT_PUBLISHED, msg_id=16977[0m
+[0;32mI (9822) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (9822) MQTT: MQTT_EVENT_PUBLISHED, msg_id=54074[0m
+[0;32mI (10332) MQTT: Mensagem Enviada, ID: 25205[0m
+[0;32mI (10522) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (10532) MQTT: MQTT_EVENT_PUBLISHED, msg_id=25205[0m
+[0;32mI (10932) MQTT: Mensagem Enviada, ID: 63800[0m
+[0;31mE (17462) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (17462) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (17462) task_wdt: Tasks currently running:[0m
+[0;31mE (17462) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (17462) task_wdt: CPU 1: tiT[0m
+[0;31mE (17462) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085062:0x3FFB2330 0x400834C1:0x3FFB2350 0x400E9482:0x3FFBCCC0 0x400E94F6:0x3FFBCCE0 0x400E954A:0x3FFBCD00 0x400E95ED:0x3FFBCD20 0x400E0F02:0x3FFBCD40 0x400E0FBA:0x3FFBCD60 0x40089FB1:0x3FFBCD90
+
+[0;31mE (22462) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (22462) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (22462) task_wdt: Tasks currently running:[0m
+[0;31mE (22462) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (22462) task_wdt: CPU 1: tiT[0m
+[0;31mE (22462) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085062:0x3FFB2330 0x400834C1:0x3FFB2350 0x400E947D:0x3FFBCCC0 0x400E94F6:0x3FFBCCE0 0x400E954A:0x3FFBCD00 0x400E95ED:0x3FFBCD20 0x400E0F02:0x3FFBCD40 0x400E0FBA:0x3FFBCD60 0x40089FB1:0x3FFBCD90
+
+����������������������������������������������������������������watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (27462) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (27462) task_wdt: Tasks currently running:[0m
+[0;31mE (27462) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (27462) task_wdt: CPU 1: tiT[0m
+[0;31mE (27462) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085062:0x3FFB2330 0x400834C1:0x3FFB2350 0x400E9482:0x3FFBCCC0 0x400E94F6:0x3FFBCCE0 0x400E954A:0x3FFBCD00 0x400E95ED:0x3FFBCD20 0x400E0F02:0x3FFBCD40 0x400E0FBA:0x3FFBCD60 0x40089FB1:0x3FFBCD90
+
+[0;31mE (32462) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (32462) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (32462) task_wdt: Tasks currently running:[0m
+[0;31mE (32462) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (32462) task_wdt: CPU 1: tiT[0m
+[0;31mE (32462) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085062:0x3FFB2330 0x400834C1:0x3FFB2350 0x400E947F:0x3FFBCCC0 0x400E94F6:0x3FFBCCE0 0x400E954A:0x3FFBCD00 0x400E95ED:0x3FFBCD20 0x400E0F02:0x3FFBCD40 0x400E0FBA:0x3FFBCD60 0x40089FB1:0x3FFBCD90
+
+[0;31mE (37462) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (37462) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (37462) task_wdt: Tasks currently running:[0m
+[0;31mE (37462) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (37462) task_wdt: CPU 1: tiT[0m
+[0;31mE (37462) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085062:0x3FFB2330 0x400834C1:0x3FFB2350 0x400E948F:0x3FFBCCC0 0x400E94F6:0x3FFBCCE0 0x400E954A:0x3FFBCD00 0x400E95ED:0x3FFBCD20 0x400E0F02:0x3FFBCD40 0x400E0FBA:0x3FFBCD60 0x40089FB1:0x3FFBCD90
+
+[0;31mE (42462) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (42462) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (42462) task_wdt: Tasks currently running:[0m
+[0;31mE (42462) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (42462) task_wdt: CPU 1: tiT[0m
+[0;31mE (42462) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x40085062:0x3FFB2330 0x400834C1:0x3FFB2350 0x400E9491:0x3FFBCCC0 0x400E94F6:0x3FFBCCE0 0x400E954A:0x3FFBCD00 0x400E95ED:0x3FFBCD20 0x400E0F02:0x3FFBCD40 0x400E0FBA:0x3FFBCD60 0x40089FB1:0x3FFBCD90
+

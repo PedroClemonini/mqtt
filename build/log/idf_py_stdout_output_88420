@@ -1,0 +1,205 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15540
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.2.3-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 12 2024 18:48:19[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (85) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=25260h (152160) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00035288 vaddr=3ffb0000 size=03d5ch ( 15708) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00038fec vaddr=40080000 size=0702ch ( 28716) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=9f750h (653136) map[0m
+[0;32mI (398) esp_image: segment 4: paddr=000df778 vaddr=4008702c size=0fca0h ( 64672) load[0m
+[0;32mI (424) esp_image: segment 5: paddr=000ef420 vaddr=50000000 size=00004h (     4) load[0m
+[0;32mI (436) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (436) boot: Disabling RNG early entropy source...[0m
+[0;32mI (447) cpu_start: Multicore app[0m
+[0;32mI (457) cpu_start: Pro cpu start user code[0m
+[0;32mI (457) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (457) cpu_start: Application information:[0m
+[0;32mI (460) cpu_start: Project name:     main[0m
+[0;32mI (464) cpu_start: App version:      02bb22a-dirty[0m
+[0;32mI (470) cpu_start: Compile time:     Nov 17 2024 16:24:57[0m
+[0;32mI (476) cpu_start: ELF file SHA256:  48cd1b824...[0m
+[0;32mI (481) cpu_start: ESP-IDF:          v5.2.3-dirty[0m
+[0;32mI (487) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (491) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (496) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (501) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (514) heap_init: At 3FFB8490 len 00027B70 (158 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (527) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40096CCC len 00009334 (36 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (544) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (562) main_task: Started on CPU0[0m
+[0;32mI (572) main_task: Calling app_main()[0m
+[0;32mI (602) wifi:wifi driver task: 3ffc04f4, prio:23, stack:6656, core=0[0m
+[0;32mI (612) wifi:wifi firmware version: 82f54d2[0m
+[0;32mI (612) wifi:wifi certification version: v7.0[0m
+[0;32mI (612) wifi:config NVS flash: enabled[0m
+[0;32mI (612) wifi:config nano formating: disabled[0m
+[0;32mI (612) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (622) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (622) wifi:Init management short buffer num: 32[0m
+[0;32mI (632) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (632) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (642) wifi:Init static rx buffer num: 10[0m
+[0;32mI (642) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (642) wifi_init: rx ba win: 6[0m
+[0;32mI (652) wifi_init: tcpip mbox: 32[0m
+[0;32mI (652) wifi_init: udp mbox: 6[0m
+[0;32mI (662) wifi_init: tcp mbox: 6[0m
+[0;32mI (662) wifi_init: tcp tx win: 5760[0m
+[0;32mI (662) wifi_init: tcp rx win: 5760[0m
+[0;32mI (672) wifi_init: tcp mss: 1440[0m
+[0;32mI (672) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (682) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (682) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (692) phy_init: phy_version 4840,a40f0ac,Aug 16 2024,16:48:06[0m
+[0;32mI (782) wifi:mode : sta (34:5f:45:a8:9c:68)[0m
+[0;32mI (782) wifi:enable tsf[0m
+[0;32mI (792) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (802) wifi:state: init -> auth (b0)[0m
+[0;32mI (802) wifi:state: auth -> assoc (0)[0m
+[0;32mI (812) wifi:state: assoc -> run (10)[0m
+[0;32mI (892) wifi:<ba-add>idx:0 (ifx:0, 10:c2:5a:15:20:10), tid:0, ssn:0, winSize:64[0m
+[0;32mI (922) wifi:connected with Maryjane, aid = 9, channel 6, BW20, bssid = 10:c2:5a:15:20:10[0m
+[0;32mI (922) wifi:security: WPA2-PSK, phy: bgn, rssi: -63[0m
+[0;32mI (932) wifi:pm start, type: 1[0m
+
+[0;32mI (932) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1002) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2442) esp_netif_handlers: sta ip: 192.168.0.28, mask: 255.255.255.0, gw: 192.168.0.1[0m
+[0;32mI (2442) Wifi: got ip:192.168.0.28[0m
+[0;32mI (2442) Wifi: Conectado ao wifi[0m
+[0;32mI (2442) Wifi: connected to ap SSID:Maryjane password:maryjane1234567890[0m
+[0;32mI (2452) Main Task: Obtem horario[0m
+[0;32mI (2462) example: Time is not set yet. Connecting to WiFi and getting time over NTP.[0m
+[0;32mI (2462) example: Initializing and starting SNTP[0m
+[0;32mI (2472) main_task: Returned from app_main()[0m
+[0;32mI (2482) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+[0m
+[0;32mI (2482) MQTT: Other event id:7[0m
+[0;32mI (2642) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=1
+[0m
+[0;32mI (2642) MQTT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (2642) MQTT: Mensagem Enviada, ID: 4525[0m
+[0;32mI (2662) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (2662) MQTT: MQTT_EVENT_PUBLISHED, msg_id=4525[0m
+[0;32mI (3242) MQTT: Mensagem Enviada, ID: 51730[0m
+[0;32mI (3472) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (3472) MQTT: MQTT_EVENT_PUBLISHED, msg_id=51730[0m
+[0;32mI (3842) MQTT: Mensagem Enviada, ID: 31798[0m
+[0;32mI (3852) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (3852) MQTT: MQTT_EVENT_PUBLISHED, msg_id=31798[0m
+[0;32mI (4442) MQTT: Mensagem Enviada, ID: 1144[0m
+[0;32mI (4502) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (4502) MQTT: MQTT_EVENT_PUBLISHED, msg_id=1144[0m
+[0;32mI (4622) wifi:<ba-add>idx:1 (ifx:0, 10:c2:5a:15:20:10), tid:6, ssn:0, winSize:64[0m
+[0;32mI (4622) example: Notification of a time synchronization event[0m
+[0;32mI (5042) MQTT: Mensagem Enviada, ID: 50016[0m
+[0;32mI (5062) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (5062) MQTT: MQTT_EVENT_PUBLISHED, msg_id=50016[0m
+[0;32mI (5642) MQTT: Mensagem Enviada, ID: 17552[0m
+[0;32mI (5662) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (5662) MQTT: MQTT_EVENT_PUBLISHED, msg_id=17552[0m
+[0;32mI (6242) MQTT: Mensagem Enviada, ID: 53523[0m
+[0;32mI (6252) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (6252) MQTT: MQTT_EVENT_PUBLISHED, msg_id=53523[0m
+[0;32mI (6842) MQTT: Mensagem Enviada, ID: 41512[0m
+[0;32mI (6872) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (6872) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41512[0m
+[0;32mI (7442) MQTT: Mensagem Enviada, ID: 35352[0m
+[0;32mI (7672) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (7672) MQTT: MQTT_EVENT_PUBLISHED, msg_id=35352[0m
+[0;32mI (8042) MQTT: Mensagem Enviada, ID: 40992[0m
+[0;32mI (8082) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (8082) MQTT: MQTT_EVENT_PUBLISHED, msg_id=40992[0m
+[0;32mI (8642) MQTT: Mensagem Enviada, ID: 8289[0m
+[0;32mI (8692) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (8702) MQTT: MQTT_EVENT_PUBLISHED, msg_id=8289[0m
+[0;32mI (9242) MQTT: Mensagem Enviada, ID: 41397[0m
+[0;32mI (9412) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (9412) MQTT: MQTT_EVENT_PUBLISHED, msg_id=41397[0m
+[0;32mI (9842) MQTT: Mensagem Enviada, ID: 11135[0m
+[0;32mI (9862) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (9862) MQTT: MQTT_EVENT_PUBLISHED, msg_id=11135[0m
+[0;32mI (10442) MQTT: Mensagem Enviada, ID: 21255[0m
+[0;32mI (10642) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (10642) MQTT: MQTT_EVENT_PUBLISHED, msg_id=21255[0m
+[0;32mI (11042) MQTT: Mensagem Enviada, ID: 46461[0m
+[0;32mI (11062) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (11062) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46461[0m
+[0;32mI (11642) MQTT: Mensagem Enviada, ID: 18131[0m
+[0;32mI (11872) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (11872) MQTT: MQTT_EVENT_PUBLISHED, msg_id=18131[0m
+[0;32mI (12242) MQTT: Mensagem Enviada, ID: 38416[0m
+[0;32mI (12262) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (12262) MQTT: MQTT_EVENT_PUBLISHED, msg_id=38416[0m
+[0;32mI (12842) MQTT: Mensagem Enviada, ID: 63496[0m
+[0;32mI (12892) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (12892) MQTT: MQTT_EVENT_PUBLISHED, msg_id=63496[0m
+[0;32mI (13442) MQTT: Mensagem Enviada, ID: 40835[0m
+[0;32mI (13602) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (13612) MQTT: MQTT_EVENT_PUBLISHED, msg_id=40835[0m
+[0;32mI (14042) MQTT: Mensagem Enviada, ID: 49641[0m
+[0;32mI (14222) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (14222) MQTT: MQTT_EVENT_PUBLISHED, msg_id=49641[0m
+[0;32mI (14642) MQTT: Mensagem Enviada, ID: 60058[0m
+[0;32mI (14832) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (14842) MQTT: MQTT_EVENT_PUBLISHED, msg_id=60058[0m
+[0;32mI (15242) MQTT: Mensagem Enviada, ID: 46916[0m
+[0;32mI (15452) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (15452) MQTT: MQTT_EVENT_PUBLISHED, msg_id=46916[0m
+[0;32mI (15842) MQTT: Mensagem Enviada, ID: 8635[0m
+[0;32mI (16062) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (16062) MQTT: MQTT_EVENT_PUBLISHED, msg_id=8635[0m
+[0;32mI (16442) MQTT: Mensagem Enviada, ID: 236[0m
+[0;32mI (16452) MQTT: Event dispatched from event loop base=MQTT_EVENTS, event_id=5
+[0m
+[0;32mI (16452) MQTT: MQTT_EVENT_PUBLISHED, msg_id=236[0m
