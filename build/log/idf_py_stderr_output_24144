@@ -1,1 +1,0 @@
-warning: style: quotes recommended around default value for string symbol ESP_WIFI_MAXIMUM_RETRY (defined at /Users/pedroclemonini/esp/mqtt/main/Kconfig.projbuild:15)
